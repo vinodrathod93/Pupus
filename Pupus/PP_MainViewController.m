@@ -35,7 +35,7 @@
     
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor], NSForegroundColorAttributeName,
                                       [UIFont fontWithName:@"ProximaNova-Regular" size:22], NSFontAttributeName, nil];
-    [self loadDataWithPath:@"http://localhost/pupus/ImageSection.php" forKey:@"scanned_images"];
+    [self loadDataWithPath:@"http://aws.amazon.com/pupus/ImageSection.php" forKey:@"scanned_images"];
 
     [self loadTextViewDataWithPath:@"http://localhost/pupus/text_data/textview_data.txt" forKey:nil];
 }
