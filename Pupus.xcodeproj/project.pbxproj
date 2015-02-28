@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		673670D91A62C728009F0AB7 /* PP_MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 673670D81A62C728009F0AB7 /* PP_MainViewController.m */; };
+		675BD71D1A6C43D800458628 /* lorem.txt in Resources */ = {isa = PBXBuildFile; fileRef = 675BD71C1A6C43D800458628 /* lorem.txt */; };
+		676399951A71628900A6FFED /* ImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 676399941A71628900A6FFED /* ImagesViewController.m */; };
+		678D57F21A5BF62600461673 /* FXImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 678D57EF1A5BF62600461673 /* FXImageView.m */; };
+		678D57F31A5BF62600461673 /* UIImage+FX.m in Sources */ = {isa = PBXBuildFile; fileRef = 678D57F11A5BF62600461673 /* UIImage+FX.m */; };
+		67A4F4151A69760C00A87625 /* VideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A4F4141A69760C00A87625 /* VideosViewController.m */; };
+		67A4F4181A69763D00A87625 /* ShowMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A4F4171A69763D00A87625 /* ShowMoreViewController.m */; };
 		67CEAEBD1A56CE0500597E1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CEAEBC1A56CE0500597E1F /* main.m */; };
 		67CEAEC01A56CE0500597E1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CEAEBF1A56CE0500597E1F /* AppDelegate.m */; };
-		67CEAEC31A56CE0500597E1F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CEAEC21A56CE0500597E1F /* ViewController.m */; };
 		67CEAEC61A56CE0500597E1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67CEAEC41A56CE0500597E1F /* Main.storyboard */; };
 		67CEAEC81A56CE0500597E1F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67CEAEC71A56CE0500597E1F /* Images.xcassets */; };
 		67CEAECB1A56CE0500597E1F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CEAEC91A56CE0500597E1F /* LaunchScreen.xib */; };
 		67CEAED71A56CE0500597E1F /* PupusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CEAED61A56CE0500597E1F /* PupusTests.m */; };
+		67CEAEE21A57156400597E1F /* PPMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CEAEE11A57156400597E1F /* PPMainPageViewController.m */; };
+		67CEAEE61A5733D100597E1F /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CEAEE51A5733D100597E1F /* iCarousel.m */; };
+		67CEE6DF1A63FBD8007A6526 /* Mark Simonson - Proxima Nova Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 671516291A60473D00F9A95E /* Mark Simonson - Proxima Nova Regular.otf */; };
+		67CEE6E01A63FBD8007A6526 /* ProximaNova-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671516271A60472D00F9A95E /* ProximaNova-Bold.ttf */; };
+		67CEE6E11A63FBD8007A6526 /* ProximaNova-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671516281A60472D00F9A95E /* ProximaNova-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +38,37 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		671516271A60472D00F9A95E /* ProximaNova-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.ttf"; sourceTree = "<group>"; };
+		671516281A60472D00F9A95E /* ProximaNova-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Light.ttf"; sourceTree = "<group>"; };
+		671516291A60473D00F9A95E /* Mark Simonson - Proxima Nova Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mark Simonson - Proxima Nova Regular.otf"; sourceTree = "<group>"; };
+		673670D71A62C728009F0AB7 /* PP_MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PP_MainViewController.h; sourceTree = "<group>"; };
+		673670D81A62C728009F0AB7 /* PP_MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PP_MainViewController.m; sourceTree = "<group>"; };
+		675BD71C1A6C43D800458628 /* lorem.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lorem.txt; sourceTree = "<group>"; };
+		676399931A71628900A6FFED /* ImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImagesViewController.h; path = ../ImagesViewController.h; sourceTree = "<group>"; };
+		676399941A71628900A6FFED /* ImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImagesViewController.m; path = ../ImagesViewController.m; sourceTree = "<group>"; };
+		678D57EE1A5BF62600461673 /* FXImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXImageView.h; sourceTree = "<group>"; };
+		678D57EF1A5BF62600461673 /* FXImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXImageView.m; sourceTree = "<group>"; };
+		678D57F01A5BF62600461673 /* UIImage+FX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FX.h"; sourceTree = "<group>"; };
+		678D57F11A5BF62600461673 /* UIImage+FX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FX.m"; sourceTree = "<group>"; };
+		67A4F4131A69760C00A87625 /* VideosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosViewController.h; sourceTree = "<group>"; };
+		67A4F4141A69760C00A87625 /* VideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosViewController.m; sourceTree = "<group>"; };
+		67A4F4161A69763D00A87625 /* ShowMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowMoreViewController.h; sourceTree = "<group>"; };
+		67A4F4171A69763D00A87625 /* ShowMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowMoreViewController.m; sourceTree = "<group>"; };
 		67CEAEB71A56CE0500597E1F /* Pupus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pupus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CEAEBB1A56CE0500597E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67CEAEBC1A56CE0500597E1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		67CEAEBE1A56CE0500597E1F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		67CEAEBF1A56CE0500597E1F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		67CEAEC11A56CE0500597E1F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		67CEAEC21A56CE0500597E1F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		67CEAEC51A56CE0500597E1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		67CEAEC71A56CE0500597E1F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		67CEAECA1A56CE0500597E1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		67CEAED01A56CE0500597E1F /* PupusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CEAED51A56CE0500597E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67CEAED61A56CE0500597E1F /* PupusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PupusTests.m; sourceTree = "<group>"; };
+		67CEAEE01A57156400597E1F /* PPMainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPMainPageViewController.h; path = ../PPMainPageViewController.h; sourceTree = "<group>"; };
+		67CEAEE11A57156400597E1F /* PPMainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPMainPageViewController.m; path = ../PPMainPageViewController.m; sourceTree = "<group>"; };
+		67CEAEE41A5733D100597E1F /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		67CEAEE51A5733D100597E1F /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +89,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		678D57ED1A5BF62600461673 /* FXImageView */ = {
+			isa = PBXGroup;
+			children = (
+				678D57EE1A5BF62600461673 /* FXImageView.h */,
+				678D57EF1A5BF62600461673 /* FXImageView.m */,
+				678D57F01A5BF62600461673 /* UIImage+FX.h */,
+				678D57F11A5BF62600461673 /* UIImage+FX.m */,
+			);
+			path = FXImageView;
+			sourceTree = "<group>";
+		};
 		67CEAEAE1A56CE0500597E1F = {
 			isa = PBXGroup;
 			children = (
+				67CEE6E21A642497007A6526 /* Resources */,
+				678D57ED1A5BF62600461673 /* FXImageView */,
+				67CEAEE31A5733D100597E1F /* iCarousel */,
 				67CEAEB91A56CE0500597E1F /* Pupus */,
 				67CEAED31A56CE0500597E1F /* PupusTests */,
 				67CEAEB81A56CE0500597E1F /* Products */,
@@ -83,9 +126,18 @@
 			children = (
 				67CEAEBE1A56CE0500597E1F /* AppDelegate.h */,
 				67CEAEBF1A56CE0500597E1F /* AppDelegate.m */,
-				67CEAEC11A56CE0500597E1F /* ViewController.h */,
-				67CEAEC21A56CE0500597E1F /* ViewController.m */,
 				67CEAEC41A56CE0500597E1F /* Main.storyboard */,
+				673670D71A62C728009F0AB7 /* PP_MainViewController.h */,
+				673670D81A62C728009F0AB7 /* PP_MainViewController.m */,
+				676399931A71628900A6FFED /* ImagesViewController.h */,
+				676399941A71628900A6FFED /* ImagesViewController.m */,
+				67CEAEE01A57156400597E1F /* PPMainPageViewController.h */,
+				67CEAEE11A57156400597E1F /* PPMainPageViewController.m */,
+				67A4F4131A69760C00A87625 /* VideosViewController.h */,
+				67A4F4141A69760C00A87625 /* VideosViewController.m */,
+				67A4F4161A69763D00A87625 /* ShowMoreViewController.h */,
+				67A4F4171A69763D00A87625 /* ShowMoreViewController.m */,
+				675BD71C1A6C43D800458628 /* lorem.txt */,
 				67CEAEC71A56CE0500597E1F /* Images.xcassets */,
 				67CEAEC91A56CE0500597E1F /* LaunchScreen.xib */,
 				67CEAEBA1A56CE0500597E1F /* Supporting Files */,
@@ -117,6 +169,25 @@
 				67CEAED51A56CE0500597E1F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		67CEAEE31A5733D100597E1F /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				67CEAEE41A5733D100597E1F /* iCarousel.h */,
+				67CEAEE51A5733D100597E1F /* iCarousel.m */,
+			);
+			path = iCarousel;
+			sourceTree = "<group>";
+		};
+		67CEE6E21A642497007A6526 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				671516291A60473D00F9A95E /* Mark Simonson - Proxima Nova Regular.otf */,
+				671516271A60472D00F9A95E /* ProximaNova-Bold.ttf */,
+				671516281A60472D00F9A95E /* ProximaNova-Light.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +270,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67CEE6DF1A63FBD8007A6526 /* Mark Simonson - Proxima Nova Regular.otf in Resources */,
+				675BD71D1A6C43D800458628 /* lorem.txt in Resources */,
+				67CEE6E01A63FBD8007A6526 /* ProximaNova-Bold.ttf in Resources */,
+				67CEE6E11A63FBD8007A6526 /* ProximaNova-Light.ttf in Resources */,
 				67CEAEC61A56CE0500597E1F /* Main.storyboard in Resources */,
 				67CEAECB1A56CE0500597E1F /* LaunchScreen.xib in Resources */,
 				67CEAEC81A56CE0500597E1F /* Images.xcassets in Resources */,
@@ -219,9 +294,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67CEAEC31A56CE0500597E1F /* ViewController.m in Sources */,
+				67A4F4151A69760C00A87625 /* VideosViewController.m in Sources */,
 				67CEAEC01A56CE0500597E1F /* AppDelegate.m in Sources */,
+				673670D91A62C728009F0AB7 /* PP_MainViewController.m in Sources */,
+				678D57F31A5BF62600461673 /* UIImage+FX.m in Sources */,
+				67A4F4181A69763D00A87625 /* ShowMoreViewController.m in Sources */,
+				67CEAEE61A5733D100597E1F /* iCarousel.m in Sources */,
+				676399951A71628900A6FFED /* ImagesViewController.m in Sources */,
+				67CEAEE21A57156400597E1F /* PPMainPageViewController.m in Sources */,
 				67CEAEBD1A56CE0500597E1F /* main.m in Sources */,
+				678D57F21A5BF62600461673 /* FXImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +494,7 @@
 				67CEAEDC1A56CE0500597E1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		67CEAEDD1A56CE0500597E1F /* Build configuration list for PBXNativeTarget "PupusTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +503,7 @@
 				67CEAEDF1A56CE0500597E1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
