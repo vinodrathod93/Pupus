@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zre-mR-w6F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wJT-a4-ZYU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -59,34 +59,31 @@
                         <viewControllerLayoutGuide type="bottom" id="YE0-ag-GVJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="znk-vg-4Ae">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Portrait - 6" translatesAutoresizingMaskIntoConstraints="NO" id="id5-f0-1Ts">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Portrait - 6" translatesAutoresizingMaskIntoConstraints="NO" id="id5-f0-1Ts" userLabel="Backgrd ImageView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aic-sY-T2M">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aic-sY-T2M" userLabel="Overlay View">
+                                <rect key="frame" x="0.0" y="64" width="600" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="id5-f0-1Ts" secondAttribute="centerX" id="5hY-YD-yNh"/>
-                            <constraint firstAttribute="centerY" secondItem="id5-f0-1Ts" secondAttribute="centerY" constant="24.5" id="PeU-Gm-Uj5"/>
-                            <constraint firstItem="id5-f0-1Ts" firstAttribute="leading" secondItem="znk-vg-4Ae" secondAttribute="leadingMargin" constant="-16" id="RPD-1a-rdx"/>
-                            <constraint firstItem="YE0-ag-GVJ" firstAttribute="top" secondItem="aic-sY-T2M" secondAttribute="bottom" id="ZKf-sF-Cac"/>
-                            <constraint firstAttribute="centerY" secondItem="aic-sY-T2M" secondAttribute="centerY" constant="24.5" id="bMk-mS-BdW"/>
-                            <constraint firstItem="YE0-ag-GVJ" firstAttribute="top" secondItem="id5-f0-1Ts" secondAttribute="bottom" id="bas-NI-rkJ"/>
-                            <constraint firstAttribute="centerX" secondItem="aic-sY-T2M" secondAttribute="centerX" id="mT8-nX-B9F"/>
-                            <constraint firstItem="aic-sY-T2M" firstAttribute="leading" secondItem="znk-vg-4Ae" secondAttribute="leadingMargin" constant="-16" id="vW6-UV-cCj"/>
+                            <constraint firstItem="YE0-ag-GVJ" firstAttribute="top" secondItem="aic-sY-T2M" secondAttribute="bottom" constant="-64" id="3mF-Xz-9wk"/>
+                            <constraint firstItem="id5-f0-1Ts" firstAttribute="top" secondItem="znk-vg-4Ae" secondAttribute="topMargin" constant="64" id="4xV-Gl-cP9"/>
+                            <constraint firstItem="aic-sY-T2M" firstAttribute="leading" secondItem="znk-vg-4Ae" secondAttribute="leading" id="QVB-b7-AuT"/>
+                            <constraint firstAttribute="bottom" secondItem="id5-f0-1Ts" secondAttribute="bottom" constant="-64" id="Rjr-Jy-Ari"/>
+                            <constraint firstItem="id5-f0-1Ts" firstAttribute="leading" secondItem="znk-vg-4Ae" secondAttribute="leading" id="U4S-2w-Jal"/>
+                            <constraint firstAttribute="trailing" secondItem="id5-f0-1Ts" secondAttribute="trailing" id="n3A-ui-uBE"/>
+                            <constraint firstItem="aic-sY-T2M" firstAttribute="top" secondItem="znk-vg-4Ae" secondAttribute="topMargin" constant="64" id="s3r-mL-HNe"/>
+                            <constraint firstAttribute="trailing" secondItem="aic-sY-T2M" secondAttribute="trailing" id="tib-WT-XBs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SYNOPSIS" id="XP3-rn-xuf">
-                        <barButtonItem key="leftBarButtonItem" image="Menu12" id="hia-j3-myj">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="IJN-LE-dDL">
+                        <barButtonItem key="leftBarButtonItem" image="Menu" id="hia-j3-myj">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
@@ -97,7 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="63D-bq-Ta4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4045" y="-1608"/>
+            <point key="canvasLocation" x="5594" y="-1899"/>
         </scene>
         <!--Images-->
         <scene sceneID="bQU-t8-8Bf">
@@ -206,7 +203,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="6fu-ul-IIT" kind="relationship" relationship="viewControllers" id="wnr-U6-91c"/>
                         <segue destination="OKv-hv-c14" kind="relationship" relationship="viewControllers" id="lup-Md-hCY"/>
                         <segue destination="nLN-mg-lNO" kind="relationship" relationship="viewControllers" id="cVA-vh-RPu"/>
                         <segue destination="Uei-ig-kmu" kind="relationship" relationship="viewControllers" id="bdF-x5-KCX"/>
@@ -215,25 +211,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oi8-fj-DTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2421" y="-1608"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="AaB-iF-P2Z">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6fu-ul-IIT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="uBM-EA-vtw"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="xQe-8Z-H7B">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="cxI-pv-JnA" kind="relationship" relationship="rootViewController" id="QAx-dF-GLg"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zJq-cO-jqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3233" y="-1608"/>
         </scene>
         <!--How-->
         <scene sceneID="KOe-0I-gR5">
@@ -254,8 +231,27 @@
             </objects>
             <point key="canvasLocation" x="3212" y="-788"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sz5-YM-k0r">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wJT-a4-ZYU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ztq-OI-hXu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cxI-pv-JnA" kind="relationship" relationship="rootViewController" id="JrK-dp-Xnd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uyB-FT-Ebg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4857" y="-1608"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Menu" width="25" height="25"/>
         <image name="Menu12" width="28" height="20"/>
         <image name="Portrait - 6" width="750" height="1334"/>
     </resources>
