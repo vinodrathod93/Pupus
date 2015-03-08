@@ -14,13 +14,18 @@
 		678D57F31A5BF62600461673 /* UIImage+FX.m in Sources */ = {isa = PBXBuildFile; fileRef = 678D57F11A5BF62600461673 /* UIImage+FX.m */; };
 		67A4F4151A69760C00A87625 /* VideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A4F4141A69760C00A87625 /* VideosViewController.m */; };
 		67A4F4181A69763D00A87625 /* ShowMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A4F4171A69763D00A87625 /* ShowMoreViewController.m */; };
+		67B497131AAB8D7E0062E07A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B497121AAB8D7E0062E07A /* HomeViewController.m */; };
+		67B497171AAB8E650062E07A /* PPFeaturedViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B497151AAB8E650062E07A /* PPFeaturedViewCell.m */; };
+		67B4971B1AAB8FA70062E07A /* PPFeaturedCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B4971A1AAB8FA70062E07A /* PPFeaturedCellView.m */; };
+		67B4971D1AAB8FBC0062E07A /* PPFeaturedCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67B4971C1AAB8FBC0062E07A /* PPFeaturedCellView.xib */; };
+		67B497211AAB930F0062E07A /* PPFeaturedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 67B4971F1AAB930F0062E07A /* PPFeaturedCollectionViewCell.m */; };
+		67B497221AAB930F0062E07A /* PPFeaturedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67B497201AAB930F0062E07A /* PPFeaturedCollectionViewCell.xib */; };
 		67CEAEBD1A56CE0500597E1F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CEAEBC1A56CE0500597E1F /* main.m */; };
 		67CEAEC01A56CE0500597E1F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CEAEBF1A56CE0500597E1F /* AppDelegate.m */; };
 		67CEAEC61A56CE0500597E1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67CEAEC41A56CE0500597E1F /* Main.storyboard */; };
 		67CEAEC81A56CE0500597E1F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67CEAEC71A56CE0500597E1F /* Images.xcassets */; };
 		67CEAECB1A56CE0500597E1F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 67CEAEC91A56CE0500597E1F /* LaunchScreen.xib */; };
 		67CEAED71A56CE0500597E1F /* PupusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CEAED61A56CE0500597E1F /* PupusTests.m */; };
-		67CEAEE21A57156400597E1F /* PPMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CEAEE11A57156400597E1F /* PPMainPageViewController.m */; };
 		67CEAEE61A5733D100597E1F /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 67CEAEE51A5733D100597E1F /* iCarousel.m */; };
 		67CEE6DF1A63FBD8007A6526 /* Mark Simonson - Proxima Nova Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 671516291A60473D00F9A95E /* Mark Simonson - Proxima Nova Regular.otf */; };
 		67CEE6E01A63FBD8007A6526 /* ProximaNova-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 671516271A60472D00F9A95E /* ProximaNova-Bold.ttf */; };
@@ -54,6 +59,16 @@
 		67A4F4141A69760C00A87625 /* VideosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosViewController.m; sourceTree = "<group>"; };
 		67A4F4161A69763D00A87625 /* ShowMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowMoreViewController.h; sourceTree = "<group>"; };
 		67A4F4171A69763D00A87625 /* ShowMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowMoreViewController.m; sourceTree = "<group>"; };
+		67B497111AAB8D7E0062E07A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ../HomeViewController.h; sourceTree = "<group>"; };
+		67B497121AAB8D7E0062E07A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ../HomeViewController.m; sourceTree = "<group>"; };
+		67B497141AAB8E650062E07A /* PPFeaturedViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFeaturedViewCell.h; sourceTree = "<group>"; };
+		67B497151AAB8E650062E07A /* PPFeaturedViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFeaturedViewCell.m; sourceTree = "<group>"; };
+		67B497191AAB8FA70062E07A /* PPFeaturedCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFeaturedCellView.h; sourceTree = "<group>"; };
+		67B4971A1AAB8FA70062E07A /* PPFeaturedCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFeaturedCellView.m; sourceTree = "<group>"; };
+		67B4971C1AAB8FBC0062E07A /* PPFeaturedCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPFeaturedCellView.xib; sourceTree = "<group>"; };
+		67B4971E1AAB930F0062E07A /* PPFeaturedCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPFeaturedCollectionViewCell.h; sourceTree = "<group>"; };
+		67B4971F1AAB930F0062E07A /* PPFeaturedCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPFeaturedCollectionViewCell.m; sourceTree = "<group>"; };
+		67B497201AAB930F0062E07A /* PPFeaturedCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PPFeaturedCollectionViewCell.xib; sourceTree = "<group>"; };
 		67CEAEB71A56CE0500597E1F /* Pupus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pupus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CEAEBB1A56CE0500597E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67CEAEBC1A56CE0500597E1F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -65,8 +80,6 @@
 		67CEAED01A56CE0500597E1F /* PupusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PupusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67CEAED51A56CE0500597E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67CEAED61A56CE0500597E1F /* PupusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PupusTests.m; sourceTree = "<group>"; };
-		67CEAEE01A57156400597E1F /* PPMainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPMainPageViewController.h; path = ../PPMainPageViewController.h; sourceTree = "<group>"; };
-		67CEAEE11A57156400597E1F /* PPMainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPMainPageViewController.m; path = ../PPMainPageViewController.m; sourceTree = "<group>"; };
 		67CEAEE41A5733D100597E1F /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		67CEAEE51A5733D100597E1F /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +113,21 @@
 			path = FXImageView;
 			sourceTree = "<group>";
 		};
+		67B497231AAB982C0062E07A /* Featured Cell */ = {
+			isa = PBXGroup;
+			children = (
+				67B497141AAB8E650062E07A /* PPFeaturedViewCell.h */,
+				67B497151AAB8E650062E07A /* PPFeaturedViewCell.m */,
+				67B497191AAB8FA70062E07A /* PPFeaturedCellView.h */,
+				67B4971A1AAB8FA70062E07A /* PPFeaturedCellView.m */,
+				67B4971C1AAB8FBC0062E07A /* PPFeaturedCellView.xib */,
+				67B4971E1AAB930F0062E07A /* PPFeaturedCollectionViewCell.h */,
+				67B4971F1AAB930F0062E07A /* PPFeaturedCollectionViewCell.m */,
+				67B497201AAB930F0062E07A /* PPFeaturedCollectionViewCell.xib */,
+			);
+			name = "Featured Cell";
+			sourceTree = "<group>";
+		};
 		67CEAEAE1A56CE0500597E1F = {
 			isa = PBXGroup;
 			children = (
@@ -127,12 +155,13 @@
 				67CEAEBE1A56CE0500597E1F /* AppDelegate.h */,
 				67CEAEBF1A56CE0500597E1F /* AppDelegate.m */,
 				67CEAEC41A56CE0500597E1F /* Main.storyboard */,
+				67B497111AAB8D7E0062E07A /* HomeViewController.h */,
+				67B497121AAB8D7E0062E07A /* HomeViewController.m */,
+				67B497231AAB982C0062E07A /* Featured Cell */,
 				673670D71A62C728009F0AB7 /* PP_MainViewController.h */,
 				673670D81A62C728009F0AB7 /* PP_MainViewController.m */,
 				676399931A71628900A6FFED /* ImagesViewController.h */,
 				676399941A71628900A6FFED /* ImagesViewController.m */,
-				67CEAEE01A57156400597E1F /* PPMainPageViewController.h */,
-				67CEAEE11A57156400597E1F /* PPMainPageViewController.m */,
 				67A4F4131A69760C00A87625 /* VideosViewController.h */,
 				67A4F4141A69760C00A87625 /* VideosViewController.m */,
 				67A4F4161A69763D00A87625 /* ShowMoreViewController.h */,
@@ -272,9 +301,11 @@
 			files = (
 				67CEE6DF1A63FBD8007A6526 /* Mark Simonson - Proxima Nova Regular.otf in Resources */,
 				675BD71D1A6C43D800458628 /* lorem.txt in Resources */,
+				67B4971D1AAB8FBC0062E07A /* PPFeaturedCellView.xib in Resources */,
 				67CEE6E01A63FBD8007A6526 /* ProximaNova-Bold.ttf in Resources */,
 				67CEE6E11A63FBD8007A6526 /* ProximaNova-Light.ttf in Resources */,
 				67CEAEC61A56CE0500597E1F /* Main.storyboard in Resources */,
+				67B497221AAB930F0062E07A /* PPFeaturedCollectionViewCell.xib in Resources */,
 				67CEAECB1A56CE0500597E1F /* LaunchScreen.xib in Resources */,
 				67CEAEC81A56CE0500597E1F /* Images.xcassets in Resources */,
 			);
@@ -297,13 +328,16 @@
 				67A4F4151A69760C00A87625 /* VideosViewController.m in Sources */,
 				67CEAEC01A56CE0500597E1F /* AppDelegate.m in Sources */,
 				673670D91A62C728009F0AB7 /* PP_MainViewController.m in Sources */,
+				67B497131AAB8D7E0062E07A /* HomeViewController.m in Sources */,
 				678D57F31A5BF62600461673 /* UIImage+FX.m in Sources */,
 				67A4F4181A69763D00A87625 /* ShowMoreViewController.m in Sources */,
 				67CEAEE61A5733D100597E1F /* iCarousel.m in Sources */,
 				676399951A71628900A6FFED /* ImagesViewController.m in Sources */,
-				67CEAEE21A57156400597E1F /* PPMainPageViewController.m in Sources */,
 				67CEAEBD1A56CE0500597E1F /* main.m in Sources */,
 				678D57F21A5BF62600461673 /* FXImageView.m in Sources */,
+				67B4971B1AAB8FA70062E07A /* PPFeaturedCellView.m in Sources */,
+				67B497211AAB930F0062E07A /* PPFeaturedCollectionViewCell.m in Sources */,
+				67B497171AAB8E650062E07A /* PPFeaturedViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

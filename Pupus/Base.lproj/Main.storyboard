@@ -1,55 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="wJT-a4-ZYU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Xfi-xt-slw">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Malibu Beach-->
-        <scene sceneID="ufC-wZ-h7g">
-            <objects>
-                <viewController storyboardIdentifier="mainPage" id="vXZ-lx-hvc" customClass="PPMainPageViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ql2-YF-GaR"/>
-                        <viewControllerLayoutGuide type="bottom" id="bur-g7-Aki"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pp1-IA-llL">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="632"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rxt-Yp-TJq" customClass="iCarousel">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="196"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="600" id="7Vs-hl-gXW"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="dataSource" destination="vXZ-lx-hvc" id="mKQ-NQ-fv9"/>
-                                            <outlet property="delegate" destination="vXZ-lx-hvc" id="lxl-Hg-Mk5"/>
-                                        </connections>
-                                    </view>
-                                </subviews>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="vrQ-nO-8do"/>
-                    <navigationItem key="navigationItem" title="Malibu Beach" id="Xcf-gO-wpq">
-                        <barButtonItem key="leftBarButtonItem" systemItem="search" id="2T2-HC-skD"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="camera" id="EK4-2e-ar3"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="mainCarouselView" destination="Rxt-Yp-TJq" id="p0H-1K-Kx0"/>
-                        <outlet property="scrollView" destination="pp1-IA-llL" id="Su7-0t-c80"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="380" y="638"/>
-        </scene>
         <!--SYNOPSIS-->
         <scene sceneID="0ok-XH-pP3">
             <objects>
@@ -94,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="63D-bq-Ta4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5594" y="-1899"/>
+            <point key="canvasLocation" x="6406" y="-1899"/>
         </scene>
         <!--Images-->
         <scene sceneID="bQU-t8-8Bf">
@@ -142,7 +97,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Images" id="a2c-ZK-TVq">
-                        <barButtonItem key="leftBarButtonItem" image="Menu12" id="0Cy-LF-jCY">
+                        <barButtonItem key="leftBarButtonItem" image="MenuNew" id="0Cy-LF-jCY">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
@@ -212,6 +167,33 @@
             </objects>
             <point key="canvasLocation" x="2421" y="-1608"/>
         </scene>
+        <!--PUPUS-->
+        <scene sceneID="kMc-fT-nqs">
+            <objects>
+                <tableViewController id="xTH-F8-cnz" customClass="HomeViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="147" sectionHeaderHeight="22" sectionFooterHeight="22" id="Mch-eh-Yo9">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="147" id="mza-73-cbW">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mza-73-cbW" id="Pg6-CG-SCl">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xTH-F8-cnz" id="yDj-6n-mRJ"/>
+                            <outlet property="delegate" destination="xTH-F8-cnz" id="LKF-pK-vxh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="PUPUS" id="5Fd-t0-Ref"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qpU-3s-Pot" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4251" y="-1729"/>
+        </scene>
         <!--How-->
         <scene sceneID="KOe-0I-gR5">
             <objects>
@@ -247,12 +229,30 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uyB-FT-Ebg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4857" y="-1608"/>
+            <point key="canvasLocation" x="5669" y="-1608"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wfV-an-2fY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xfi-xt-slw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GCn-bA-f9m">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xTH-F8-cnz" kind="relationship" relationship="rootViewController" id="cfT-oQ-JC2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vue-5H-gtm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3439" y="-1729"/>
         </scene>
     </scenes>
     <resources>
         <image name="Menu" width="25" height="25"/>
-        <image name="Menu12" width="28" height="20"/>
+        <image name="MenuNew" width="25" height="25"/>
         <image name="Portrait - 6" width="750" height="1334"/>
     </resources>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
