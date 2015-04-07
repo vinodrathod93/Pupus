@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PPFeaturedCellView.h"
 
 @interface PPFeaturedViewCell : UITableViewCell
 
+@property(nonatomic) PPFeaturedCellView *collectionView;
+@property (nonatomic) NSArray *cellArray;
 @end

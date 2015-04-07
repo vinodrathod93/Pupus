@@ -7,6 +7,7 @@
 //
 
 #import "PP_MainViewController.h"
+#import "AppDelegate.h"
 
 
 @interface PP_MainViewController ()
@@ -14,6 +15,7 @@
     UITextView *textView;
     UIImageView *searchedImageView;
     UIImageView *authorImageView;
+    UIImage *image;
 }
 @property (nonatomic) NSMutableArray *imagesArray;
 @property (nonatomic) NSMutableArray *textViewArray;
@@ -35,57 +37,59 @@
     self.tabBarItem.selectedImage = [[UIImage imageNamed:@"Selected_What3.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
      */
     
-    self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys: [UIColor colorWithRed:10/255.0f green:99/255.0f blue:56/255.0f alpha:1.0], NSForegroundColorAttributeName,
-                                      [UIFont fontWithName:@"ProximaNova-Regular" size:22], NSFontAttributeName, nil];
     
-    
-    [self loadTextViewDataWithPath:@"http://localhost/pupus/text_data/textview_data.txt" forKey:nil];
-    
-    [self loadDataWithPath:@"http://localhost/pupus/ImageSection.php" forKey:@"scanned_images"];
 
     
 }
+
 
 -(void)loadDataWithPath:(NSString *)URLString forKey:(NSString *)key {
-    
+    NSLog(@"Images =======> %@",URLString);
     NSURL *imagesURL = [NSURL URLWithString:URLString];
-    NSData *data = [NSData dataWithContentsOfURL:imagesURL];
     NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDownloadTask *task = [session downloadTaskWithURL:imagesURL completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+    NSURLSessionDataTask *task = [session dataTaskWithURL:imagesURL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error == nil) {
-            NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
-            NSLog(@"%@", jsonDictionary);
-            if (!self.imagesArray) {
-                self.imagesArray = [NSMutableArray array];
-            }
-            
-            for (NSDictionary *dictionary in jsonDictionary) {
-                NSString *url = [dictionary objectForKey:key];
-                [self.imagesArray addObject:url];
-            }
-            NSLog(@"Insides Data%@",self.imagesArray);
-            
+            image = [UIImage imageWithData:data];
+            [self.imagesArray addObject:image];
         }
-        else {
-            UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Unable to load data. Connectivity Error!" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil];
-            [alertView show];
-        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.backgroundImageView.image = image;
+        });
     }];
-    
     [task resume];
     
+//    [AppDelegate downloadDataFromURL:imagesURL withCompletionHandler:^(NSData *data) {
+//        NSError *error;
+//        if (error == nil) {
+//            NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+//            NSLog(@"%@", jsonDictionary);
+//            if (!self.imagesArray) {
+//                self.imagesArray = [NSMutableArray array];
+//            }
+//            
+//            for (NSDictionary *dictionary in jsonDictionary) {
+//                NSString *url = [dictionary objectForKey:key];
+//                [self.imagesArray addObject:url];
+//            }
+//            NSLog(@"Insides Data%@",self.imagesArray);
+//            [[NSNotificationCenter defaultCenter] postNotificationName:@"ImagesArrayFilled" object:nil];
+//            
+//        }
+//    }];
+    
 }
+
 
 
 -(void)loadTextViewDataWithPath:(NSString *)URLString forKey:(NSString *)key {
     NSURL *URL = [NSURL URLWithString:URLString];
+    
     NSURLSession *session = [NSURLSession sharedSession];
     
     NSURLSessionDataTask *task = [session dataTaskWithURL:URL completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (error == nil) {
-            
             NSString *strings = [[NSString alloc]initWithBytes:[data bytes] length:[data length] encoding:NSUTF8StringEncoding];
-            NSLog(@"%@",strings);
+            NSLog(@"String value is =============>%@",strings);
             if (!self.textViewArray) {
                 self.textViewArray = [NSMutableArray array];
             }
@@ -93,15 +97,25 @@
             [self.textViewArray addObject:strings];
             NSLog(@"%@",self.textViewArray[0]);
         }
-    
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self configureViews:nil];
+        });
+        
     }];
     
     [task resume];
 }
 
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    UINavigationController *navCon  = (UINavigationController*) [self.navigationController.viewControllers objectAtIndex:1];
+    navCon.navigationItem.title = self.bookName;
+    
+//    [self loadDataWithPath:@"http://localhost/pupus/ImageSection.php" forKey:@"scanned_images"];
     
     _blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     _foregroundContentView = [[UIVisualEffectView alloc]initWithEffect:[UIVibrancyEffect effectForBlurEffect:[self blurEffect]]];
@@ -109,10 +123,24 @@
     _backgroundView = [[UIVisualEffectView alloc]initWithEffect:[self blurEffect]];
     _contentView = [[UIView alloc]initWithFrame:self.view.frame];
     
-    [self configureViews];
-    // Do any additional setup after loading the view.
+    
 }
 
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"ViewDidAppear");
+}
+
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    NSLog(@"ViewWillAppear");
+    
+    [self loadTextViewDataWithPath:self.textViewUrl forKey:nil];
+    [self loadDataWithPath:self.backgroundImageUrl forKey:nil];
+}
 
 -(void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
@@ -123,20 +151,21 @@
 
 #pragma mark - Configuring Views
 
--(void)configureViews {
+-(void)configureViews:(NSNotification *)notification {
     
     // Status Bar style
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
     
     
     // Loading Background Images from Server
     [[self view] setBackgroundColor:[UIColor clearColor]];
-    int number = (int)self.imagesArray.count;
-    NSUInteger randomNumber = arc4random_uniform(number);
-    NSLog(@"Random Number %lu",(unsigned long)randomNumber);
-    NSURL *url = [NSURL URLWithString:self.imagesArray[randomNumber]];
-    NSData *imageData = [NSData dataWithContentsOfURL:url];
-    [[self backgroundImageView] setImage:[UIImage imageWithData:imageData]];
+    
+//    int number = (int)self.imagesArray.count;
+//    NSUInteger randomNumber = arc4random_uniform(number);
+//    NSLog(@"Random Number %lu",(unsigned long)randomNumber);
+//    NSURL *url = [NSURL URLWithString:self.imagesArray[randomNumber]];
+//    NSData *imageData = [NSData dataWithContentsOfURL:url];
+    [[self backgroundImageView] setImage:image];
     self.backgroundImageView.contentMode = UIViewContentModeScaleAspectFit;
     
     
@@ -147,7 +176,7 @@
 
     
     searchedImageView = [[UIImageView alloc]init];
-    searchedImageView.image = [UIImage imageWithData:imageData];
+//    searchedImageView.image = [UIImage imageWithData:imageData];
     [self.foregroundContentView addSubview:searchedImageView];
     
     textView = [[UITextView alloc]init];
@@ -187,4 +216,8 @@
 
 
 
+- (IBAction)backVC:(id)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

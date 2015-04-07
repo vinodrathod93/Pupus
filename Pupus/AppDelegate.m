@@ -17,10 +17,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:245/255.0f green:166/255.0f blue:35/255.0f alpha:0.87]];
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:74/255.0f green:144/255.0f blue:226/255.0f alpha:1.0]];
     
-    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIColor colorWithRed:10/255.0f green:99/255.0f blue:56/255.0f alpha:1.0], NSForegroundColorAttributeName,
-                                                          [UIFont fontWithName:@"ProximaNova-Regular" size:22], NSFontAttributeName, nil]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:10/255.0f green:99/255.0f blue:56/255.0f alpha:1.0]];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor], NSForegroundColorAttributeName,
+                                                          [UIFont fontWithName:@"ProximaNova-Light" size:22], NSFontAttributeName, nil]];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
     return YES;
 }
@@ -45,6 +48,40 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
++(void)downloadDataFromURL:(NSURL *)url withCompletionHandler:(void (^)(NSData *))completionHandler{
+    // Instantiate a session configuration object.
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
+    
+    // Instantiate a session object.
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration];
+    
+    // Create a data task object to perform the data downloading.
+    NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+        if (error != nil) {
+            // If any error occurs then just display its description on the console.
+            NSLog(@"%@", [error localizedDescription]);
+        }
+        else{
+            // If no error occurs, check the HTTP status code.
+            NSInteger HTTPStatusCode = [(NSHTTPURLResponse *)response statusCode];
+            
+            // If it's other than 200, then show it on the console.
+            if (HTTPStatusCode != 200) {
+                NSLog(@"HTTP status code = %ld", (long)HTTPStatusCode);
+            }
+            
+            // Call the completion handler with the returned data on the main thread.
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                completionHandler(data);
+            }];
+        }
+    }];
+    
+    // Resume the task.
+    [task resume];
 }
 
 @end

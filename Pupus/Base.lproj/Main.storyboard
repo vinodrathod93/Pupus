@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Xfi-xt-slw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Xfi-xt-slw">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--SYNOPSIS-->
         <scene sceneID="0ok-XH-pP3">
             <objects>
-                <viewController id="cxI-pv-JnA" customClass="PP_MainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainVC" id="cxI-pv-JnA" customClass="PP_MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="urw-OW-eQH"/>
                         <viewControllerLayoutGuide type="bottom" id="YE0-ag-GVJ"/>
@@ -38,8 +38,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="SYNOPSIS" id="XP3-rn-xuf">
-                        <barButtonItem key="leftBarButtonItem" image="Menu" id="hia-j3-myj">
+                        <barButtonItem key="leftBarButtonItem" image="Back" style="plain" id="hia-j3-myj">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="backVC:" destination="cxI-pv-JnA" id="Pjc-dh-Uc9"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -120,18 +123,34 @@
                     <view key="view" contentMode="scaleToFill" id="Yka-Ud-HYe">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6Q-9C-c7P">
+                                <rect key="frame" x="275.5" y="285" width="49" height="30"/>
+                                <state key="normal" title="Hit me!">
+                                    <color key="titleColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showMessage:" destination="nLN-mg-lNO" eventType="touchUpInside" id="4ga-Zo-PzM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="D6Q-9C-c7P" secondAttribute="centerX" id="2n4-iY-w2Y"/>
+                            <constraint firstAttribute="centerY" secondItem="D6Q-9C-c7P" secondAttribute="centerY" id="fYl-mg-SIe"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="gzA-dd-9Jl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNS-1e-Wx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3212" y="-9"/>
+            <point key="canvasLocation" x="3568" y="-9"/>
         </scene>
         <!--Item-->
         <scene sceneID="zaX-h5-15P">
             <objects>
-                <viewController id="Uei-ig-kmu" customClass="ShowMoreViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="showMore" id="Uei-ig-kmu" customClass="ShowMoreViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Re5-fb-8f9"/>
                         <viewControllerLayoutGuide type="bottom" id="s1Y-2g-SEA"/>
@@ -159,8 +178,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="OKv-hv-c14" kind="relationship" relationship="viewControllers" id="lup-Md-hCY"/>
-                        <segue destination="nLN-mg-lNO" kind="relationship" relationship="viewControllers" id="cVA-vh-RPu"/>
-                        <segue destination="Uei-ig-kmu" kind="relationship" relationship="viewControllers" id="bdF-x5-KCX"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oi8-fj-DTN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -176,7 +193,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="147" id="mza-73-cbW">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PPFeaturedViewCell" rowHeight="147" id="mza-73-cbW">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mza-73-cbW" id="Pg6-CG-SCl">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -188,11 +205,15 @@
                             <outlet property="delegate" destination="xTH-F8-cnz" id="LKF-pK-vxh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="PUPUS" id="5Fd-t0-Ref"/>
+                    <navigationItem key="navigationItem" title="PUPUS" id="5Fd-t0-Ref">
+                        <barButtonItem key="leftBarButtonItem" image="MenuNew" id="C31-iw-orG">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qpU-3s-Pot" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4251" y="-1729"/>
+            <point key="canvasLocation" x="4225" y="-1750"/>
         </scene>
         <!--How-->
         <scene sceneID="KOe-0I-gR5">
@@ -251,7 +272,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Menu" width="25" height="25"/>
+        <image name="Back" width="25" height="25"/>
         <image name="MenuNew" width="25" height="25"/>
         <image name="Portrait - 6" width="750" height="1334"/>
     </resources>

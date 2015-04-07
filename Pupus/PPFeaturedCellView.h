@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HomeViewController.h"
 
 @interface PPFeaturedCellView : UIView
 
+@property (nonatomic) NSArray *collectionData;
+@property (nonatomic) NSNumber *sectionId;
+
+-(void)setCollectionData:(NSArray *)collectionData;
 @end

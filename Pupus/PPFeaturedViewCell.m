@@ -7,11 +7,10 @@
 //
 
 #import "PPFeaturedViewCell.h"
-#import "PPFeaturedCellView.h"
 
 @interface PPFeaturedViewCell()
 
-@property(nonatomic) PPFeaturedCellView *collectionView;
+
 @end
 
 @implementation PPFeaturedViewCell
@@ -26,6 +25,7 @@
         // Initialization code
         _collectionView = [[NSBundle mainBundle] loadNibNamed:@"PPFeaturedCellView" owner:self options:nil][0];
         _collectionView.frame = self.bounds;
+//        _collectionView.collectionData = self.cellArray;
         [self.contentView addSubview:_collectionView];
     }
     return self;

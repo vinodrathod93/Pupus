@@ -14,31 +14,28 @@
 
 @implementation VideosViewController
 
--(void)awakeFromNib {
-    self.tabBarItem.image = [[UIImage imageNamed:@"Explain"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    self.tabBarItem.title = nil;
-    self.tabBarItem.selectedImage = [[UIImage imageNamed:@"Selected_Explain3"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    self.tabBarItem.imageInsets = UIEdgeInsetsMake(5.5, 0, -5.5, 0);
-}
+//-(void)awakeFromNib {
+//    self.tabBarItem.image = [[UIImage imageNamed:@"Explain"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    self.tabBarItem.title = nil;
+//    self.tabBarItem.selectedImage = [[UIImage imageNamed:@"Selected_Explain3"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    self.tabBarItem.imageInsets = UIEdgeInsetsMake(5.5, 0, -5.5, 0);
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(IBAction)showMessage:(id)sender {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Hello, World" message:@"This is my First App" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Awesome" style:UIAlertActionStyleDefault handler:nil];
+    [alert addAction:action];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
-*/
 
 @end

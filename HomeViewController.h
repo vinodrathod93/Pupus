@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+//@protocol passArrays<NSObject>
+//
+//-(void)setFeaturedArray:(NSArray *)array;
+//-(void)setTopChartsArray:(NSArray *)array;
+//
+//@end
+
 @interface HomeViewController : UITableViewController
+
+
+//@property (nonatomic, retain)id <passArrays> delegate;
+
+@property (strong, nonatomic) NSMutableArray *featuredArray;
+@property (strong, nonatomic) NSMutableArray *topChartsArray;
+
 
 @end

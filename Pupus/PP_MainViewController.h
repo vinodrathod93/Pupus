@@ -14,9 +14,13 @@
 @property (nonatomic) UIVisualEffectView *backgroundView;
 @property (nonatomic) UIVisualEffectView *foregroundContentView;
 @property (nonatomic) UIBlurEffect *blurEffect;
-//@property (nonatomic) UITextView *textView;
+
 @property (weak, nonatomic) IBOutlet UIView *overlayView;
-
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+- (IBAction)backVC:(id)sender;
 
+
+@property (nonatomic) NSString *textViewUrl;
+@property (nonatomic) NSString *backgroundImageUrl;
+@property (nonatomic) NSString *bookName;
 @end
